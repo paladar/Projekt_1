@@ -10,6 +10,9 @@ and open the template in the editor.
 body{
     background-color: #eee;
 }
+.content{
+    padding: 40px 0;
+}
 .login{
     padding-top: 30vh;
     text-align: center;
@@ -35,6 +38,20 @@ body{
 }
 .btn{
     cursor: pointer;
+}
+table .actions{
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+table .actions li{
+    float: left;
+    padding: 5px;
+}
+table.table-bordered.dataTable th{
+    background-color: #fff;;
+    border-color: #000;
 }
 @media (max-width: 1000px){
     .login .login-box{

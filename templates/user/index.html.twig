@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User index{% endblock %}
+
+{% block main %}
+    <div class="row">
+        <h1 class="col">{{'users.header'|trans}}</h1>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="datatable table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>{{'users.username'|trans}}</th>
+                        <th>{{'users.email'|trans}}</th>
+                        <th>{{'actions'|trans}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                        <tr>
+                            <td>{{ user.id }}</td>
+                            <td>{{ user.username }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>
+                                <ul class="actions">
+                                    <li>
+                                        <a href="{{ path('user_show', {'id': user.id}) }}"   ><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('user_edit', {'id': user.id}) }}"   ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="4">{{'no_records'|trans}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

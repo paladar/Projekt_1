@@ -19,14 +19,10 @@ class MenuLabel {
     protected $id;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="string")
      */
     protected $label;
 
-    /**
-     * @ORM\OneToMany(targetEntity="MenuItem", mappedBy="menuLabel", cascade={"persist"})
-     */
-    protected $menuItems;
 
     function getId() {
         return $this->id;
@@ -42,18 +38,6 @@ class MenuLabel {
 
     function setLabel($label) {
         $this->label = $label;
-    }
-
-    function getMenuItems() {
-        return $this->menuItems;
-    }
-
-    function addMenuItem($menuItem) {
-        $this->menuItems[] = $menuItem;
-    }
-
-    function removeMenuItem($menuItem) {
-        $this->menuItems->removeElement($menuItem);
     }
 
 }

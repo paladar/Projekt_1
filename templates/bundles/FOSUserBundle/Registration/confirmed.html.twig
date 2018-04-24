@@ -1,0 +1,8 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
+{% block fos_user_content %}
+    <p>{{ 'registration.success'|trans }}</p>
+    {% if targetUrl %}
+    <p><a href="{{ targetUrl }}">{{ 'registration.go'|trans }}</a></p>
+    {% endif %}
+{% endblock fos_user_content %}

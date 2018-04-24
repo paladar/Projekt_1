@@ -1,0 +1,33 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<form action="{{ path('fos_user_registration_register') }}"  method="POST">
+    <div class="form-group" id="fos_user_registration_form">
+        <div class="form-group">
+            <label>{{'form.email'|trans}}</label>
+            {{ form_widget(form.email, { 'attr': {'class': 'form-control' } }) }}
+            {{ form_errors(form.email) }}
+        </div>
+        <div class="form-group">
+            <label>{{'form.username'|trans}}</label>
+            {{ form_widget(form.username, { 'attr': {'class': 'form-control'} }) }}
+            {{ form_errors(form.username) }}
+        </div>
+        <div class="form-group">
+            <label>{{'form.password'|trans}}</label>
+            {{ form_widget(form.plainPassword.first, { 'attr': {'class': 'form-control'} }) }}
+            {{ form_errors(form.plainPassword.first) }}
+        </div>
+        <div class="form-group">
+            <label>{{'form.password_confirmation'|trans}}</label>
+            {{ form_widget(form.plainPassword.second, { 'attr': {'class': 'form-control'} }) }}
+            {{ form_errors(form.plainPassword.second) }}
+        </div>
+        {{ form_rest(form) }}
+    </div>
+    <div class="form-group">
+        <a href="{{path('fos_user_security_login')}}">Zaloguj się</a>
+    </div>
+    <div class="form-group">
+        <input class="btn btn-primary float-right" type="submit" value="{{ 'registration.submit'|trans }}">
+    </div>
+</form>

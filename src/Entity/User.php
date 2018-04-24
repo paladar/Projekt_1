@@ -26,4 +26,10 @@ class User extends BaseUser {
         $this->id = $id;
     }
 
+    public function __construct() {
+        parent::__construct();
+        $this->enabled = true;
+        $this->roles = array('ROLE_USER');
+    }
+
 }

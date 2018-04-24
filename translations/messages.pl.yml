@@ -1,0 +1,19 @@
+system_name: Menu Restauracji
+logout: Wyloguj
+actions: Akcje
+no_records: Brak wyników
+
+registration:
+    success: Rejestracja zakończona pomyslnie
+    go: Zaczynamy
+
+menu_labels:
+    header: Zakładki Menu
+    add: Dodaj Zakładkę Menu
+    label: Nazwa
+    
+users:
+    main: Użytkownicy
+    header: Użytkownicy
+    username: Nazwa użytkownika
+    email: Email
