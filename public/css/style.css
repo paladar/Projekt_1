@@ -9,6 +9,21 @@ and open the template in the editor.
 */
 body{
     background-color: #eee;
+    font-family: Arial;
+}
+input{
+    height: 40px;
+}
+textarea{
+    height: 200px;
+    resize: none;
+}
+.text-right{
+    text-align: right;
+}
+.buttons{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .content{
     padding: 40px 0;
@@ -39,6 +54,10 @@ body{
 .btn{
     cursor: pointer;
 }
+.btn-delete{
+    background-color: #e7420a;
+    color: #fff;
+}
 table .actions{
     list-style: none;
     display: inline-block;
@@ -53,13 +72,7 @@ table.table-bordered.dataTable th{
     background-color: #fff;;
     border-color: #000;
 }
-@media (max-width: 1000px){
-    .login .login-box{
-        width: 80%;
-    }
+.actions li i{
+    font-size: 24px;
 }
-@media (max-width: 550px){
-    .login .login-box{
-        width: 98%;
-    }
-}
+

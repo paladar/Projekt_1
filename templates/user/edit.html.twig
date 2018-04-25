@@ -1,13 +1,22 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit User{% endblock %}
+{% block title %}{{'users.edit'|trans}} #{{user.id}}{% endblock %}
 
 {% block main %}
-    <h1>Edit User</h1>
-
-    {{ include('user/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('user_index') }}">back to list</a>
-
-    {{ include('user/_delete_form.html.twig') }}
+    <div class="row">
+        <h1 class="col">{{'users.edit'|trans}} #{{user.id}}</h1>
+    </div>
+    <div class="row buttons">
+        <div class="col">
+            <a class="btn btn-primary" href="{{ path('user_index') }}">{{'back'|trans}}</a>
+        </div>
+        <div class="col text-right">
+            {{ include('user/_delete_form.html.twig') }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ include('user/_form.html.twig', {'button_label': 'Update'}) }}
+        </div>
+    </div>
 {% endblock %}

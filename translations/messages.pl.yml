@@ -1,19 +1,29 @@
-system_name: Menu Restauracji
+system_name: Zarządzanie Produktami
 logout: Wyloguj
 actions: Akcje
 no_records: Brak wyników
+back: Powrót do listy
+save: Zapisz
+delete: Usuń
+delete_question: Czy na pewno chcesz usunąć ten element?
 
 registration:
     success: Rejestracja zakończona pomyslnie
     go: Zaczynamy
 
-menu_labels:
-    header: Zakładki Menu
-    add: Dodaj Zakładkę Menu
+product:
+    header: Produkty
+    add: Dodaj produkt
     label: Nazwa
+    price: Cena
+    edit: Edycja produktu
+    product: Produkt
+    text: Opis
+    color: Kolor
     
 users:
-    main: Użytkownicy
     header: Użytkownicy
     username: Nazwa użytkownika
     email: Email
+    edit: Edycja użytkownika
+    user: Użytkownik

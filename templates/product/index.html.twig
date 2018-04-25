@@ -1,10 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{'users.header'|trans}}{% endblock %}
+{% block title %}{{'product.header'|trans}}{% endblock %}
 
 {% block main %}
     <div class="row">
-        <h1 class="col">{{'users.header'|trans}}</h1>
+        <h1 class="col">{{'product.header'|trans}}</h1>
+        <div class="col"><a class="btn btn-primary float-right" href="{{ path('product_new') }}">{{'product.add'|trans}}</a></div>
     </div>
     <div class="row">
         <div class="col">
@@ -12,24 +13,24 @@
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>{{'users.username'|trans}}</th>
-                        <th>{{'users.email'|trans}}</th>
+                        <th>{{'product.label'|trans}}</th>
+                        <th>{{'product.price'|trans}}</th>
                         <th width="10%">{{'actions'|trans}}</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for user in users %}
+                    {% for product in products %}
                         <tr>
-                            <td>{{ user.id }}</td>
-                            <td>{{ user.username }}</td>
-                            <td>{{ user.email }}</td>
+                            <td>{{ product.id }}</td>
+                            <td>{{ product.label }}</td>
+                            <td>{{ product.price }}</td>
                             <td>
                                 <ul class="actions">
                                     <li>
-                                        <a href="{{ path('user_show', {'id': user.id}) }}"   ><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                        <a href="{{ path('product_show', {'id': product.id}) }}"   ><i class="fa fa-eye" aria-hidden="true"></i></a>
                                     </li>
                                     <li>
-                                        <a href="{{ path('user_edit', {'id': user.id}) }}"   ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                        <a href="{{ path('product_edit', {'id': product.id}) }}"   ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                     </li>
                                 </ul>
                             </td>
@@ -43,4 +44,5 @@
             </table>
         </div>
     </div>
+</div>
 {% endblock %}
